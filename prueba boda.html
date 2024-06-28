@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #map_content {
+            display: block;
+            margin: 0 auto; /* Centra horizontalmente el contenido */
+            position: absolute; /* Cambia a "relative" si prefieres posicionarlo con respecto al flujo normal */
+            left: 50%; /* Centra horizontalmente */
+            top: 50%; /* Centra verticalmente */
+            transform: translate(-50%, -50%); /* Ajusta para centrar completamente */
+        }
+        #map_video {
+            display: block;
+            width: 100%; /* Ajusta el ancho del video según tus necesidades */
+            height: auto; /* Ajusta la altura automáticamente */
+        }
+        #map_img {
+            display: none;
+            width: 90%; /* Ajusta el ancho de la imagen según tus necesidades */
+            height: auto; /* Ajusta la altura automáticamente */
+        }
+    </style>
+    <script>
+        function toggleContent() {
+            var video = document.getElementById("map_video");
+            var img = document.getElementById("map_img");
+            if (video.style.display === "block") {
+                video.style.display = "none";
+                img.style.display = "block";
+            } else {
+                video.style.display = "block";
+                img.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="map_content">
+        <video id="map_video" autoplay loop muted>
+            <source src="C:\Users\juanm\OneDrive\Desktop\Nueva carpeta\imgenes\a7474d140633ff1ac3db7d6d90baca63.mp4" type="video/mp4">
+            Tu navegador no admite la etiqueta de video.
+        </video>
+        <img id="map_img" src="C:\Users\juanm\OneDrive\Desktop\Nueva carpeta\imgenes\Green White Nature Watercolor Wedding Banner.png" alt="Descripción de la imagen">
+    </div>
+    <button onclick="toggleContent()">Mostrar/ocultar contenido</button>
+</body>
+</html>
